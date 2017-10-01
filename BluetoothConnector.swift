@@ -9,7 +9,8 @@ func printHelp() {
         let addressString = device.addressString,
         let deviceName = device.name
         else { return }
-        print("\(addressString) - \(deviceName)")
+        let connected = device.isConnected()
+        print("\(addressString) - \(connected) - \(deviceName)")
     })
 }
 
